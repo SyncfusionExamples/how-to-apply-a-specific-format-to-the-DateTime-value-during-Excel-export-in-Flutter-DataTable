@@ -17,7 +17,7 @@ Future<void> saveAndLaunchFile(List<int> bytes, String fileName) async {
     if (Platform.isAndroid) {
       final Directory? directory =
           await path_provider.getExternalStorageDirectory();
-      if (Platform.isAndroid && directory != null) {
+      if (directory != null) {
         path = directory.path;
       }
     } else {
